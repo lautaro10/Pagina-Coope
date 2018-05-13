@@ -4,6 +4,10 @@ jQuery(document).ready(function($) {
 		$("html, body").animate({ scrollTop: 0 }, 1000);
 		return false;
 	});
+
+	$('.carousel').carousel({
+		interval: 6000
+	})
 	
 		$('.accordion').on('show', function (e) {
 		
