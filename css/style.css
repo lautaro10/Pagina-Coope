@@ -1635,3 +1635,8 @@ i.icon-white {
 	width:100%;
 	position:absolute;
 }
+
+.span__line-height {
+	line-height: 3.9em;
+	display: block;
+}
