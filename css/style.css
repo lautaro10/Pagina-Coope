@@ -45,9 +45,6 @@ CONTENTS:
 01. General
 ============================================================ */
 
-div, article, section, header, footer, nav, li {
-	position:relative;
-}
 .group:after {
 	display:block;
 	height:0;
@@ -126,21 +123,6 @@ a.scrollup i:hover {
 	margin-bottom:0;
 }
 
-
-/*---------- forms ----------*/
-
-input[type=text], input[type=submit], textarea {
-	width: 100%;
-	padding: 0.5em;
-	font-size: 1em;
-	margin-bottom: 1.5em;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-input, button, select, textarea {
-	font-family:'Open Sans', Arial, sans-serif;
-}
 /* =========================================================
 02. Typography
 ============================================================ */
@@ -178,8 +160,6 @@ ul, ol {
 	font-size: 1em; /* 16px */
 	line-height: 1.5; /* 24px */
 	margin: 0 0 1.5em 0;
-}
-body, input, textarea {
 }
 
 a {
@@ -407,47 +387,6 @@ header .logo {
 	-o-box-shadow: none;
 }
 
-
-
-/* --- Header subscribe form --- */
-
-#header-wrapper input[type=text] {
-	background: rgba(227, 231, 228, 1);
-	font-family: 'Open Sans', sans serif;
-	font-size: 1.3125em;
-	border: 0;
-	text-align: center;
-	vertical-align: middle;
-	margin-bottom:0 !important;
-}
-#header-wrapper input[type=text]:focus {
-	background: #43413e;
-	color: #eff1ef;
-	transition: background 0.25 ease-in;
-	-moz-transition: background 0.25 ease-in;
-	-webkit-transition: background 0.25 ease-in;
-}
-#header-wrapper input[type=text] {
-	height: 2.9em;
-	width:50%;
-}
-#header-wrapper input[type=submit] {
-	color: #fff;
-	width: 185px;
-	height: 2.9em;
-	font-size: 1.3125em; /* 21px */
-	padding:0.5em;
-	letter-spacing: 0.05em;
-	margin: 0;
-	border: 0;
-	text-transform: none;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-}
-#header-wrapper input[type=submit]:hover, #header-wrapper input[type=submit]:active {
-	background: #43413e !important;
-}
 
 
 section.section {
@@ -781,6 +720,11 @@ section#services.section .service-box:hover {
 	background:#e6ffe6;
 }
 
+/* === section factura === */
+
+section#factura {
+	background: #e6ffe6;
+}
 
 /* === section blog === */
 
@@ -1614,10 +1558,12 @@ i.icon-white {
  display: block;
  text-align:center
 }
- .job-position: {
+
+.job-position {
  margin-bottom: 1.5em;
 }
- .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+
+.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
  margin-left: auto;
  margin-right: auto;
 }
@@ -1628,6 +1574,7 @@ i.icon-white {
 	position:relative;
 	height:0;
 }
+
 .map-responsive iframe{
 	left:0;
 	top:0;
@@ -1636,7 +1583,155 @@ i.icon-white {
 	position:absolute;
 }
 
-.span__line-height {
-	line-height: 3.9em;
-	display: block;
+/* General button style */
+.btn {
+    border: none;
+    font-family: 'Lato';
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+    font-family: 'FontAwesome';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Icon separator */
+.btn-sep {
+    padding: 25px 60px 25px 120px;
+}
+
+.btn-sep:before {
+    background: rgba(0,0,0,0.15);
+}
+
+/* Button 1 */
+.btn-1 {
+    background: #3498db;
+    color: #fff;
+}
+
+.btn-1:hover {
+    background: #2980b9;
+}
+
+.btn-1:active {
+    background: #2980b9;
+    top: 2px;
+}
+
+.btn-1:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+}
+
+/* Button 2 */
+.btn-2 {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.btn-2:hover {
+    background: #27ae60;
+}
+
+.btn-2:active {
+    background: #27ae60;
+    top: 2px;
+}
+
+.btn-2:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+}
+
+/* Button 3 */
+.btn-3 {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.btn-3:hover {
+    background: #c0392b;
+}
+
+.btn-3:active {
+    background: #c0392b;
+    top: 2px;
+}
+
+.btn-3:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
+}
+
+/* Button 3 */
+.btn-4 {
+    background: #34495e;
+    color: #fff;
+}
+
+.btn-4:hover {
+    background: #2c3e50;
+}
+
+.btn-4:active {
+    background: #2c3e50;
+    top: 2px;
+}
+
+.btn-4:before {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    line-height: 3;
+    font-size: 140%;
+    width: 60px;
 }
