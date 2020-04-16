@@ -163,11 +163,11 @@
 				<h4>Facturas</h4>
 				<div class="row">
 					<div class="span6 offset1">
-						<h2>Descargá tu última factura de luz</h2>
+						<h2>Descargá tu última factura</h2>
 						<div >
 							<form class="form-search" id="frmajax">
-								<span>N° de Usuario</span>
-								<input type="text" name="nroUsuario" id="nroUsuario" class="input-medium search-query"  placeholder="0-0000-00">
+								<span>N° de Usuario:</span>
+								<input type="text" name="nroUsuario" id="nroUsuario" class="input-medium search-query"  placeholder="XXXXXX">
 								<button type="submit" class="btn-primary" id="btnFacturaLuz">Buscar</button>
 							</form>
 						</div>
@@ -682,16 +682,14 @@
 
 		<!-- The Modal -->
 		<div id="myModal" class="modal">
-
-		<!-- Modal content -->
-		<div class="modal-content">
-			<span class="close">&times;</span>
-			<h3>Factura no encontrada</h3>
-			<p>No se encontró ninguna factura, revise el número de usuario ingresado, el formato correcto es el siguiente: xx-xxxx-xx</p>
+			<!-- Modal content -->
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h3>Factura no encontrada</h3>
+				<p>No se encontró ninguna factura, revise el número de usuario ingresado.</p>
+				<span><strong>El número deberá ser sin guiones ni espacios<strong></span>
+			</div>
 		</div>
-
-		</div>
-
 
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.scrollTo.js"></script>

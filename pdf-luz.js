@@ -183,14 +183,7 @@ $(document).ready(function(){
 					doc.setFontSize(8);
 					doc.text(informacion, 12, 280);
 
-					if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-						window.navigator.msSaveOrOpenBlob(doc.output("blob"));
-						}
-						else {
-						var objectUrl = URL.createObjectURL(doc.output("blob"));
-						window.open(objectUrl);
-						}
-					// window.open(URL.createObjectURL(doc.output("blob")))
+					doc.save('marzo-2020.pdf');
 				} else {
 					// Get the modal
 					var modal = document.getElementById("myModal");
@@ -371,6 +364,6 @@ function _cargarCuerpo(data, doc) {
 		linea+=4
 	}
 	if (data.fila23) {
-		doc.text(data.total2, 12, linea + 4);
+		doc.text(data.total3, 12, linea + 4);
 	}
 }

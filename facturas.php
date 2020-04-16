@@ -2,7 +2,7 @@
 	$conexion=mysqli_connect('localhost','root','','coope');
 
 	$nro_usuario=$_POST['nroUsuario'];
-	$sql="SELECT * from luz WHERE usuario = '{$nro_usuario}' limit 1";
+	$sql="SELECT * from luz WHERE usuario = '{$nro_usuario}' order by fecha limit 1";
 	$result =  mysqli_query($conexion,$sql);
 	$myArray = array();
 	if (mysqli_num_rows($result) > 0) {
